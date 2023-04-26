@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Odin Project - Project: Etch-A-Sketch </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <h1>ETCH-A-SKETCH</h1>
+    <canvas id="can" width="500" height="400"></canvas>
+
+    <div class="controls">
+      <p>
+        Brush color
+        <input type="color" value="#000" onchange="setColor(this.value)">
+        Brush size
+        <input type="range" id="sizeInput" min="1" max="50" value="50" oninput="resizeBrush(this.value)">
+        <output id="sizeOutput">50</output>
+      </p>
+
+      <p>
+        Set width
+        <input type="text" onchange="setCanvasWidth(this.value)">
+        Set Height
+        <input type="text" onchange="setCanvasHeight(this.value)">
+      </p>
+
+      <p>
+        <input type="button" id="clear" value="CLEAR CANVAS" onclick="clearCanvas()">
+      </p>
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
